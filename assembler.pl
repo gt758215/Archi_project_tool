@@ -6,7 +6,7 @@
 #         perl assembler.pl [S file path] [start PC]
 #         * example: perl assembler.pl test.S 12
 #                    perl assembler.pl test.S 0x200
-#         warning: it doesn't work for -0x80000000
+#         warning: it doesn't work for -0x format
 #     Output: a iimage.bin file
 #     
 # S file content:
