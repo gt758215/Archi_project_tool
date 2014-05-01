@@ -1,7 +1,5 @@
 Archi_project_tool 
-
 ==================
-
     Content 2 script file: 
     assembler.pl 
     dimageMaker.pl 
