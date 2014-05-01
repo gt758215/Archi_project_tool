@@ -55,46 +55,46 @@ Assembler for 32-bit MIPS simulator, supports instructions in the bellow:
 
 Script name: assembler.pl
  
- Created by ken hua on 2014/4/16
- Usage:
-     Input format: 
-         perl assembler.pl [S file path] [start PC]
-         * example: perl assembler.pl test.S 12
-                    perl assembler.pl test.S 0x200
-         warning: it doesn't work for -0x format
-     Output: a iimage.bin file
+  Created by ken hua on 2014/4/16
+  Usage:
+    Input format: 
+      perl assembler.pl [S file path] [start PC]
+      * example:  perl assembler.pl test.S 12
+                  perl assembler.pl test.S 0x200
+      warning: it doesn't work for -0x format
+    Output: a iimage.bin file
      
- S file content:
-     Note: One line for one instruction.
+  S file content:
+    Note: One line for one instruction.
 
-     Registers format: 
-         It works using register number: $0~$31
-         or register name: $zero $at $t0~$t9 $s0~$s7 $a0~$a3 
-                           $v0~$v1 $k1~$k2 $sp $fp $gp $ra
-         * example: add $t9, $15, $16
+    Registers format: 
+          It works using register number: $0~$31 
+          or register name: $zero $at $t0~$t9 $s0~$s7 $a0~$a3 
+                          $v0~$v1 $k1~$k2 $sp $fp $gp $ra
+          * example: add $t9, $15, $16
 
-     Instructions:
-         space by "," or blanks
-         *example add $9, $9, $9
-                  add $9  $9 $9
-                  add $9, $9 $9
+    Instructions:
+          space by "," or blanks
+          *example: add $9, $9, $9
+                    add $9  $9 $9
+                    add $9, $9 $9
 
-     Values:
-         You can use the expression of hexadecimal or decimal: 
-         * example: slti $9, $8, 0x88
-                    lw   $20,-0x20($0)
-                    addi $29, $29, 4
-         warning: it doesn't work for -0x80000000
+    Values:
+          You can use the expression of hexadecimal or decimal: 
+          * example:  slti $9, $8, 0x88
+                      lw   $20,-0x20($0)
+                      addi $29, $29, 4
+          warning: it doesn't work for -0x80000000
 
-     Lables: 
-         A valid label followed by a colon,
-         so you can use it in the branch and jump instruction or not.
-         * example: for1st: add $11, $12, $13
-                            j   for1st
-                            beq $12, $13, -2
-     Comments: 
-         Words behind a comment sign will be ignored
-         * example: add $1, $1 ,$0  # this is a comment
+    Lables: 
+          A valid label followed by a colon,
+           so you can use it in the branch and jump instruction or not.
+          * example: for1st:  add $11, $12, $13
+                              j   for1st
+                              beq $12, $13, -2
+    Comments: 
+          Words behind a comment sign will be ignored
+          * example: add $1, $1 ,$0  # this is a comment
 
 ****  2  ****
 Script name: dimageMaker.pl
