@@ -55,22 +55,22 @@ Archi_project_tool
     Script name: assembler.pl 
   
     Created by ken hua on 2014/4/16 
-    Usage: 
-    Input format:  
-      perl assembler.pl [S file path] [start PC] 
-      * example:  perl assembler.pl test.S 12 
-                  perl assembler.pl test.S 0x200 
-      warning: it doesn't work for -0x format 
-    Output: a iimage.bin file 
+      Usage: 
+        Input format:  
+          perl assembler.pl [S file path] [start PC] 
+          * example:  perl assembler.pl test.S 12 
+                      perl assembler.pl test.S 0x200 
+          warning: it doesn't work for -0x format 
+        Output: a iimage.bin file 
       
     S file content: 
       Note: One line for one instruction. 
  
-    Registers format: 
-          It works using register number: $0~$31 
-          or register name: $zero $at $t0~$t9 $s0~$s7 $a0~$a3 
-                          $v0~$v1 $k1~$k2 $sp $fp $gp $ra 
-          * example: add $t9, $15, $16 
+        Registers format: 
+              It works using register number: $0~$31 
+              or register name: $zero $at $t0~$t9 $s0~$s7 $a0~$a3 
+                                  $v0~$v1 $k1~$k2 $sp $fp $gp $ra 
+              * example: add $t9, $15, $16 
  
     Instructions: 
           space by "," or blanks 
@@ -94,21 +94,21 @@ Archi_project_tool
     Comments: 
           Words behind a comment sign will be ignored 
           * example: add $1, $1 ,$0  # this is a comment 
-  
-
-  Script name: dimageMaker.pl 
-  Created by ken hua on 2014/4/16 
-  Usage: 
-     Input format:
-         perl dimageMaker.pl [data file path] [start sp] 
-         * example: perl dimageMaker.pl dataMem 0x200 
-                    perl dimageMaker.pl dataMem 12 
-         warning: it doesn't work for -0x format 
-     Output: a dimage.bin file 
+      
+    
+    Script name: dimageMaker.pl 
+    Created by ken hua on 2014/4/16 
+    Usage: 
+        Input format:
+            perl dimageMaker.pl [data file path] [start sp] 
+            * example:  perl dimageMaker.pl dataMem 0x200 
+                        perl dimageMaker.pl dataMem 12 
+            warning: it doesn't work for -0x format 
+        Output: a dimage.bin file 
  
-  data file content: 
-     hexadecimal or decimal numbers be spaced by a few blanks, tabs, and \n. 
-     *example: 0x07        20 11       
-               13 
-     warning: it doesn't work for -0x80000000 
- 
+    data file content: 
+        hexadecimal or decimal numbers be spaced by a few blanks, tabs, and \n. 
+        *example:   0x07        20 11       
+                    13 
+        warning: it doesn't work for -0x80000000 
+    
