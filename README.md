@@ -1,3 +1,4 @@
+<pre><code>
 Archi_project_tool 
 
 ================== 
@@ -50,7 +51,7 @@ Assembler for 32-bit MIPS simulator, supports instructions in the bellow:
   halt                0x3F        x               halt the simulator 
   
   
-****  1  **** 
+  1  **** 
  
 Script name: assembler.pl 
   
@@ -95,7 +96,7 @@ Script name: assembler.pl
           Words behind a comment sign will be ignored 
           * example: add $1, $1 ,$0  # this is a comment 
   
-****  2  **** 
+  2  **** 
 Script name: dimageMaker.pl 
  Created by ken hua on 2014/4/16 
  Usage: 
@@ -112,3 +113,4 @@ Script name: dimageMaker.pl
                13 
      warning: it doesn't work for -0x80000000 
  
+</code></pre>
