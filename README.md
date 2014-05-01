@@ -1,4 +1,4 @@
-<pre><code>
+<pre>
 Archi_project_tool 
 
 ================== 
@@ -113,4 +113,4 @@ Script name: dimageMaker.pl
                13 
      warning: it doesn't work for -0x80000000 
  
-</code></pre>
+</pre>
