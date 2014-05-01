@@ -1,8 +1,8 @@
 Archi_project_tool 
 ==================
     Content 2 script file: 
-    assembler.pl 
-    dimageMaker.pl 
+    1. assembler.pl 
+    2. dimageMaker.pl 
  
     Assembler for 32-bit MIPS simulator, supports instructions in the bellow: 
     R type: 
@@ -47,9 +47,9 @@ Archi_project_tool
     j addr              0x02        v               PC = (PC+4 & 0xF0000000) | (4*addr) 
     jal addr            0x03        v               $31 = PC+4; PC = (PC+4 & 0xF0000000) | (4*addr) 
     halt                0x3F        x               halt the simulator 
-  
-  
- 
+    
+    ********  1  ********
+    
     Script name: assembler.pl 
   
     Created by ken hua on 2014/4/16 
@@ -93,6 +93,9 @@ Archi_project_tool
           Words behind a comment sign will be ignored 
           * example: add $1, $1 ,$0  # this is a comment 
       
+      
+      
+    ********  2  ********
     
     Script name: dimageMaker.pl 
     Created by ken hua on 2014/4/16 
