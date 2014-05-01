@@ -7,21 +7,21 @@ assembler.pl
 dimageMaker.pl 
  
 Assembler for 32-bit MIPS simulator, supports instructions in the bellow: 
-  R type: 
-                      opcode (6)  rs (5)  rt(5)   rd (5)  shamt(5)  funct(6)  action 
-  bit interval        31-26       25-21   20-16   15-11   10-6      5-0 
-  add rd, rs, rt      0x00        v       v       v       x         0x20      $d = $s + $t 
-  sub rd, rs, rt      0x00        v       v       v       x         0x22      $d = $s - $t 
-  and rd, rs, rt      0x00        v       v       v       x         0x24      $d = $s & $t 
-  or  rd, rs, rt      0x00        v       v       v       x         0x25      $d = $s | $t 
-  xor rd, rs, rt      0x00        v       v       v       x         0x26      $d = $s ^ $t 
-  nor rd, rs, rt      0x00        v       v       v       x         0x27      $d = ~($s | $t) 
-  nand  rd, rs, rt    0x00        v       v       v       x         0x28      $d = ~($s & $t) 
-  slt rd, rs, rt      0x00        v       v       v       x         0x2A      $d = ($s < $t) 
-  sll rd, rt, shamt   0x00        x       v       v       v         0x00      $d = $t << shamt 
-  srl rd, rt, shamt   0x00        x       v       v       v         0x02      $d = $t >> shamt 
-  sra rd, rt, shamt   0x00        x       v       v       v         0x03      $d = $t >> shamt (with sign extension) 
-  jr  rs              0x00        v       x       x       x         0x08      PC = $s 
+    R type: 
+                        opcode (6)  rs (5)  rt(5)   rd (5)  shamt(5)  funct(6)  action 
+    bit interval        31-26       25-21   20-16   15-11   10-6      5-0 
+    add rd, rs, rt      0x00        v       v       v       x         0x20      $d = $s + $t 
+    sub rd, rs, rt      0x00        v       v       v       x         0x22      $d = $s - $t 
+    and rd, rs, rt      0x00        v       v       v       x         0x24      $d = $s & $t 
+    or  rd, rs, rt      0x00        v       v       v       x         0x25      $d = $s | $t 
+    xor rd, rs, rt      0x00        v       v       v       x         0x26      $d = $s ^ $t 
+    nor rd, rs, rt      0x00        v       v       v       x         0x27      $d = ~($s | $t) 
+    nand  rd, rs, rt    0x00        v       v       v       x         0x28      $d = ~($s & $t) 
+    slt rd, rs, rt      0x00        v       v       v       x         0x2A      $d = ($s < $t) 
+    sll rd, rt, shamt   0x00        x       v       v       v         0x00      $d = $t << shamt 
+    srl rd, rt, shamt   0x00        x       v       v       v         0x02      $d = $t >> shamt 
+    sra rd, rt, shamt   0x00        x       v       v       v         0x03      $d = $t >> shamt (with sign extension) 
+    jr  rs              0x00        v       x       x       x         0x08      PC = $s 
  
   I type:  
                       opcode (6)  rs (5)  rt(5)   immediate(16)   action 
