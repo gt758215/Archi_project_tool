@@ -23,39 +23,39 @@ Archi_project_tool
     sra rd, rt, shamt   0x00        x       v       v       v         0x03      $d = $t >> shamt (with sign extension) 
     jr  rs              0x00        v       x       x       x         0x08      PC = $s 
  
-  I type:  
-                      opcode (6)  rs (5)  rt(5)   immediate(16)   action 
-  bit interval        31-26       25-21   20-16   15-0 
-  addi rt, rs, imm    0x08        v       v       v               $d = $s + $t 
-  lw  rt, rs, imm     0x23        v       v       v               $t = mem[$s+imm] (4 bytes) 
-  lh  rt, rs, imm     0x21        v       v       v               $t = mem[$s+imm] (2 bytes) (with sign extension) 
-  lhu rt, rs, imm     0x25        v       v       v               $t = mem[$s+imm] (2 bytes) 
-  lb  rt, rs, imm     0x20        v       v       v               $t = mem[$s+imm] (1 bytes) (with sign extension) 
-  lbu rt, rs, imm     0x24        v       v       v               $t = mem[$s+imm] (1 bytes) 
-  sw  rt, rs, imm     0x2B        v       v       v               mem[$s+imm] = $t (4 bytes) 
-  sh  rt, rs, imm     0x29        v       v       v               mem[$s+imm] = $t (2 bytes) 
-  sb  rt, rs, imm     0x28        v       v       v               mem[$s+imm] = $t (1 bytes) 
-  lui rt, imm         0x0F        x       v       v               $t = imm << 16 
-  andi  rt, rs, imm   0x0C        v       v       v               $t = $s & imm 
-  ori rt, rs, imm     0x0D        v       v       v               $t = $s | imm 
-  nori  rt, rs, imm   0x0E        v       v       v               $t = ~($s | imm) 
-  slti  rt, rs, imm   0x0A        v       v       v               $t = ($s < imm) 
-  beq rs, rt, imm     0x04        v       v       v               PC = PC+4+imm if ($s == $t) 
-  bne rs, rt, imm     0x05        v       v       v               PC = PC+4+imm if ($s != $t) 
-   
-  J type & Special type:  
-                      opcode (6)  address(26)     action 
-  bit interval        31-26       25-0 
-  j addr              0x02        v               PC = (PC+4 & 0xF0000000) | (4*addr) 
-  jal addr            0x03        v               $31 = PC+4; PC = (PC+4 & 0xF0000000) | (4*addr) 
-  halt                0x3F        x               halt the simulator 
+    I type:  
+                        opcode (6)  rs (5)  rt(5)   immediate(16)   action 
+    bit interval        31-26       25-21   20-16   15-0 
+    addi rt, rs, imm    0x08        v       v       v               $d = $s + $t 
+    lw  rt, rs, imm     0x23        v       v       v               $t = mem[$s+imm] (4 bytes) 
+    lh  rt, rs, imm     0x21        v       v       v               $t = mem[$s+imm] (2 bytes) (with sign extension) 
+    lhu rt, rs, imm     0x25        v       v       v               $t = mem[$s+imm] (2 bytes) 
+    lb  rt, rs, imm     0x20        v       v       v               $t = mem[$s+imm] (1 bytes) (with sign extension) 
+    lbu rt, rs, imm     0x24        v       v       v               $t = mem[$s+imm] (1 bytes) 
+    sw  rt, rs, imm     0x2B        v       v       v               mem[$s+imm] = $t (4 bytes) 
+    sh  rt, rs, imm     0x29        v       v       v               mem[$s+imm] = $t (2 bytes) 
+    sb  rt, rs, imm     0x28        v       v       v               mem[$s+imm] = $t (1 bytes) 
+    lui rt, imm         0x0F        x       v       v               $t = imm << 16 
+    andi  rt, rs, imm   0x0C        v       v       v               $t = $s & imm 
+    ori rt, rs, imm     0x0D        v       v       v               $t = $s | imm 
+    nori  rt, rs, imm   0x0E        v       v       v               $t = ~($s | imm) 
+    slti  rt, rs, imm   0x0A        v       v       v               $t = ($s < imm) 
+    beq rs, rt, imm     0x04        v       v       v               PC = PC+4+imm if ($s == $t) 
+    bne rs, rt, imm     0x05        v       v       v               PC = PC+4+imm if ($s != $t) 
+     
+    J type & Special type:  
+                        opcode (6)  address(26)     action 
+    bit interval        31-26       25-0 
+    j addr              0x02        v               PC = (PC+4 & 0xF0000000) | (4*addr) 
+    jal addr            0x03        v               $31 = PC+4; PC = (PC+4 & 0xF0000000) | (4*addr) 
+    halt                0x3F        x               halt the simulator 
   
   
  
-  Script name: assembler.pl 
+    Script name: assembler.pl 
   
-  Created by ken hua on 2014/4/16 
-  Usage: 
+    Created by ken hua on 2014/4/16 
+    Usage: 
     Input format:  
       perl assembler.pl [S file path] [start PC] 
       * example:  perl assembler.pl test.S 12 
@@ -63,8 +63,8 @@ Archi_project_tool
       warning: it doesn't work for -0x format 
     Output: a iimage.bin file 
       
-  S file content: 
-    Note: One line for one instruction. 
+    S file content: 
+      Note: One line for one instruction. 
  
     Registers format: 
           It works using register number: $0~$31 
