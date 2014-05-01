@@ -2,11 +2,11 @@ Archi_project_tool
 
 ==================
 
-Content 2 script file: 
-assembler.pl 
-dimageMaker.pl 
+    Content 2 script file: 
+    assembler.pl 
+    dimageMaker.pl 
  
-Assembler for 32-bit MIPS simulator, supports instructions in the bellow: 
+    Assembler for 32-bit MIPS simulator, supports instructions in the bellow: 
     R type: 
                         opcode (6)  rs (5)  rt(5)   rd (5)  shamt(5)  funct(6)  action 
     bit interval        31-26       25-21   20-16   15-11   10-6      5-0 
