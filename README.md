@@ -3,8 +3,8 @@ Archi_project_tool
 ==================
 <code>
 Content 2 script file: 
-1. assembler.pl 
-2. dimageMaker.pl 
+assembler.pl 
+dimageMaker.pl 
  
 Assembler for 32-bit MIPS simulator, supports instructions in the bellow: 
   R type: 
@@ -51,9 +51,8 @@ Assembler for 32-bit MIPS simulator, supports instructions in the bellow:
   halt                0x3F        x               halt the simulator 
   
   
-  1  **** 
  
-Script name: assembler.pl 
+  Script name: assembler.pl 
   
   Created by ken hua on 2014/4/16 
   Usage: 
@@ -96,10 +95,10 @@ Script name: assembler.pl
           Words behind a comment sign will be ignored 
           * example: add $1, $1 ,$0  # this is a comment 
   
-  2  **** 
-Script name: dimageMaker.pl 
- Created by ken hua on 2014/4/16 
- Usage: 
+
+  Script name: dimageMaker.pl 
+  Created by ken hua on 2014/4/16 
+  Usage: 
      Input format:
          perl dimageMaker.pl [data file path] [start sp] 
          * example: perl dimageMaker.pl dataMem 0x200 
@@ -107,10 +106,9 @@ Script name: dimageMaker.pl
          warning: it doesn't work for -0x format 
      Output: a dimage.bin file 
  
- data file content: 
+  data file content: 
      hexadecimal or decimal numbers be spaced by a few blanks, tabs, and \n. 
      *example: 0x07        20 11       
                13 
      warning: it doesn't work for -0x80000000 
  
-</code>
