@@ -112,6 +112,7 @@ while(<IN>){
     $_ =~ s/#.*//g;
     @in = split /\s+/,$_;
     if($in[0] =~ /(\w+):/){shift @in;}
+    if($#in<0 || $#in>4){next;}
     print "PC:",$pc_start+$count*4,"\n";
     print "@in","\n";
     for (1..$#in){
